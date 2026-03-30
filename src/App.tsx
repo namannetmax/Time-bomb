@@ -109,11 +109,10 @@ export default function App() {
 
   return (
     <div className={`min-h-screen transition-colors duration-500 ${isFinished ? 'bg-red-950' : 'bg-[#0A0A0A]'} text-red-500 font-mono selection:bg-red-500 selection:text-black overflow-hidden`}>
-      {/* Alarm Sound */}
+      {/* Alarm/Explosion Sound */}
       <audio 
         ref={audioRef} 
-        src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" 
-        loop 
+        src="https://assets.mixkit.co/active_storage/sfx/1100/1100-preview.mp3" 
       />
       
       {/* Background Grid/Wires Effect */}
