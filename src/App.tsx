@@ -109,10 +109,11 @@ export default function App() {
 
   return (
     <div className={`min-h-screen transition-colors duration-500 ${isFinished ? 'bg-red-950' : 'bg-[#0A0A0A]'} text-red-500 font-mono selection:bg-red-500 selection:text-black overflow-hidden`}>
-      {/* Alarm/Explosion Sound */}
+      {/* Alarm Sound */}
       <audio 
         ref={audioRef} 
-        src="https://assets.mixkit.co/active_storage/sfx/1100/1100-preview.mp3" 
+        src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" 
+        loop 
       />
       
       {/* Background Grid/Wires Effect */}
@@ -152,7 +153,7 @@ export default function App() {
 
             <div className="space-y-6">
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest font-bold text-red-900 flex items-center gap-2">
+                <label className="text-xs uppercase tracking-widest font-bold text-red-600 flex items-center gap-2">
                   <Calendar className="w-3 h-3" /> Set Target Date
                 </label>
                 <input 
@@ -163,7 +164,7 @@ export default function App() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest font-bold text-red-900 flex items-center gap-2">
+                <label className="text-xs uppercase tracking-widest font-bold text-red-600 flex items-center gap-2">
                   <Clock className="w-3 h-3" /> Set Target Time
                 </label>
                 <input 
@@ -216,7 +217,7 @@ export default function App() {
                           {String(item.value).padStart(2, '0')}
                         </span>
                       </div>
-                      <span className="text-[10px] font-black text-red-900 mt-2 tracking-[0.3em]">
+                      <span className="text-[10px] font-black text-red-500 mt-2 tracking-[0.3em]">
                         {item.label}
                       </span>
                     </div>
@@ -233,7 +234,7 @@ export default function App() {
                 ].map((stat) => (
                   <div key={stat.label} className="bg-[#111] border-2 border-[#222] p-4 flex flex-col items-center">
                     <span className="text-xl font-bold text-red-700 tabular-nums">{stat.value}</span>
-                    <span className="text-[9px] font-black text-red-950 uppercase tracking-widest">{stat.label}</span>
+                    <span className="text-[9px] font-black text-red-600 uppercase tracking-widest">{stat.label}</span>
                   </div>
                 ))}
               </div>
